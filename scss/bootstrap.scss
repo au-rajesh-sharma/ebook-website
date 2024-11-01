@@ -1,0 +1,81 @@
+// image container with negative top margin -->
+$enable-negative-margins: true; 
+
+// Font
+$font-family-sans-serif: 'Open Sans', sans-serif;
+
+//add color variables
+$primary: #c167ef;// shade of purple 
+$secondary: #10bcee; //shade of blue
+$dark: #2b3041; //mix of blue and black
+$light: #f3f6f9; //shade of white
+
+// adding some spaces at top/bottom of navbar
+// in node_modules/bootstrap/scss/variables.scss,
+// search for navbar-padding-y
+// we find this: $navbar-padding-y: $spacer * .5 !default;
+// we will change this variable to 1rem instead of .5rem
+$navbar-padding-y: 1rem;
+
+// we will set varibale for text to be white
+$navbar-dark-color: #fff;
+
+//set navbar color light blue on hover
+$navbar-dark-hover-color: $secondary;
+
+//change bootstrap variable for default button styles
+//look into node_modules/bootstrap/scss/variables.scss
+
+// button border radius
+$button-radius: 50px; //own variable. make all 50px
+$btn-border-radius: $button-radius;
+$btn-border-radius-sm: $button-radius;
+$btn-border-radius-lg: $button-radius;
+
+//button padding
+$button-padding-x: 30px;//own variable
+$button-padding-y: 10px;// own variable
+
+$btn-padding-x: $button-padding-x;
+$btn-padding-x-sm: $button-padding-x;
+$btn-padding-x-lg: $button-padding-x;
+
+$btn-padding-y: $button-padding-y;
+$btn-padding-y-sm: $button-padding-y;
+$btn-padding-y-lg: $button-padding-y;
+
+//border radius of hamburger
+$navbar-toggler-border-radius: 5px;
+
+//  in original variables.scss, some variables like margin and padding can only go upto 5
+//  we will create variables to overcome this, and go upto 7 or 8 or more
+//  in original variables.scss, these variables are the $spacers. 
+// We can add value for more spacers variables
+
+// add more variables for spacers
+$spacer: 1rem !default;
+$spacers: (
+
+//below are original variables
+0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+
+  // we added own variables below
+  // with these, we can now do mt-8 or pb-6
+  6: $spacer * 6,
+  7: $spacer * 8,
+  8: $spacer * 12,
+
+) !default;
+
+// changing base line height (1.5) to 1.7
+$line-height-base: 1.7;
+
+//increasing mb for headings thru spacer
+$headings-margin-bottom: $spacer * 1;
+
+@import '../node_modules/bootstrap/scss/bootstrap';

@@ -1,0 +1,56 @@
+/* style for navbar link 'contact' btn */
+.navbar.btn-outline-light:hover {
+    color: #333;
+    //we could also use a bootstrap variable here
+    // color: var(--bs-dark);
+}
+
+// make navbar transition
+.navbar {
+    transition: all 0.5s ease-in-out;
+}
+
+// make navbar-sticky transparent (when scrolled)
+.navbar-sticky {
+    opacity: 0.9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+}
+
+/* style for background image in hero area */
+.header {
+    background: url("../images/header-background.jpg")
+     center center no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 1000px) {
+    // centering header image  
+    .hero .image-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    // centering header text
+    .hero .text-container {
+        text-align: center;
+    }
+}
+
+// increasing modal width
+.modal-dialog {
+    max-width: 1040px;
+}
+
+// download image
+.download {
+    background: url('../images/download-background.jpg')    
+}
+
+//map iframe size bigger
+.map iframe {
+    left: 0;
+    right: 0;
+    height: 400px;
+    width: 100%;
+    border: none;
+}
